@@ -19,6 +19,11 @@ int main() {
     printf("Distance in Meters: %.2f\n", meters);
     printf("Distance in Centimeters: %.2f\n", centimeters);
 
+    printf("\n");
+    printf("----------------------------------------\n");
+
+
     return 0;
     
 }
+
