@@ -1,8 +1,8 @@
 #include<stdio.h>
 int main() {
-    
-    printf("Distance Converter\n");
+
     printf("----------------------------------------\n");
+    printf("Distance Converter\n");
     printf("\n");
 
     float kilometer;
@@ -21,6 +21,25 @@ int main() {
 
     printf("\n");
     printf("----------------------------------------\n");
+    printf("\n");
+
+    printf("----------------------------------------\n");
+    printf("Temperature Converter\n");
+    printf("\n");
+
+    float celsius;
+    printf("Enter the temperature in Celsius: ");
+    scanf("%f", &celsius);
+
+    float fahrenheit = (celsius * 9/5) + 32;
+    float kelvin = (celsius + 273.15);
+
+    printf("Temperature in Fahrenheit: %.2f\n", fahrenheit);
+    printf("Temperature in Kelvin: %.2f\n", kelvin);
+
+    printf("\n");
+    printf("----------------------------------------\n");
+    printf("\n");
 
 
     return 0;
