@@ -29,5 +29,13 @@ int main(){
     printf("!a: %d\n", !a); // Logical NOT
     printf("!c: %d\n", !c); // Logical NOT
 
+    printf("----------------Bitwise Operators----------------\n");
+
+    printf("a&b: %d\n", a&b); // Bitwise AND
+    printf("a|b: %d\n", a|b); // Bitwise OR
+    printf("a^b: %d\n", a^b); // Bitwise XOR
+    printf("~c: %d\n", ~c); // Bitwise NOT
+    printf("a<<2: %d\n", a<<2); // Left shift
+    printf("a>>2: %d\n", a>>2); // Right shift
 
 }
