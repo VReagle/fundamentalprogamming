@@ -5,7 +5,7 @@ int main(){
 
     for (char i = 'a'; i <= 'z'; i++)
     {
-        printf("%c", i);
+        printf("%4c", i);
     }
     
     printf("\n1 to 100 all odd numbers \n");
@@ -25,7 +25,7 @@ int main(){
     
     while (y <= 10)
     {
-        printf("%d", y);
+        printf("%4d", y);
         y += 1;
     }
 
@@ -52,7 +52,7 @@ int main(){
     {
         if (z % 2 == 0)
         {
-            printf("%d", z);
+            printf("%4d", z);
         }
         
     }
