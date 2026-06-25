@@ -2,6 +2,12 @@
 
 // Fibonacci Number
 
+int fibonacci(){
+    
+
+
+}
+
 int main(){
 
 
