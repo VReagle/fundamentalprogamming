@@ -8,7 +8,7 @@ int isPrime(int num){
     {
         return 0;
     }
-    for (int i = 2; i * i <= num; i++)
+    for (int i = 2; i * i <= num; i++) //3
     {
         if (num % i == 0)
         {
@@ -23,11 +23,10 @@ int main(){
     int input;
 
     printf("Enter a Number: ");
-    scanf("%d", &input);
+    scanf("%d", &input); //15
     
-    if(isPrime(input)){
-        printf("Its prime");
-    }else{
-        printf("Its not prime");
-    }
+    if(isPrime(input)) printf("Its prime");
+        
+    else printf("Its not prime");
+
 }
