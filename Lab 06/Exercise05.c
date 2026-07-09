@@ -30,9 +30,9 @@ int main(){
     {
         for (col = 0; col < 2; col++)
         {
-            printf("%4d",A[raw][col]);
+            printf("%4d",C[raw][col]);
         }
-        
+        printf("\n");
     }
     
 }
