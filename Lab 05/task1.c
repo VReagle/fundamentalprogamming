@@ -8,18 +8,18 @@ int main(){
         printf("%4c", i);
     }
     
-    printf("\n1 to 100 all odd numbers \n");
+    printf("\n\n1 to 100 all odd numbers \n");
 
     int x = 1;
 
     while (x <= 100)
     {
-        printf("%d", x);
+        printf("%4d", x);
         x += 2;
         
     }
 
-    printf("\n1 to 10 all natural numbers \n");
+    printf("\n\n1 to 10 all natural numbers \n");
 
     int y = 1;
     
@@ -29,7 +29,7 @@ int main(){
         y += 1;
     }
 
-    printf("\nNegative number\n");
+    printf("\n\nNegative number\n");
 
     int num;
 
@@ -46,7 +46,7 @@ int main(){
     
     }
     
-    printf("\n1 to 20 all even number\n");
+    printf("\n\n1 to 20 all even number\n");
 
     for (int z = 1; z <= 20; z++)
     {
