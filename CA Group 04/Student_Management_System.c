@@ -1,65 +1,65 @@
 #include <stdio.h>
 
-int main()
-{
-    int n, i;
-    char name[20][50];
-    int attendance[20];
-    int sum_present = 0;
-    int sum_absent = 0;
+#define MAX 50
 
-    printf("===== Student Attendance System =====\n");
+struct Student {
+    int id;
+    char name[50];
+    int attendance;
+};
+
+int main() {
+    struct Student students[MAX];
+    int n, i, choice;
+
+    printf("===== STUDENT ATTENDANCE SYSTEM =====\n");
 
     printf("Enter number of students: ");
     scanf("%d", &n);
 
-    // Input student names
-    for(i = 0; i < n; i++)
-    {
-        printf("\nEnter name of student %d: ", i + 1);
-        scanf("%s", name[i]);
+    for (i = 0; i < n; i++) {
+        printf("\nEnter details for student %d\n", i + 1);
+        printf("Student ID: ");
+        scanf("%d", &students[i].id);
+        printf("Student Name: ");
+        scanf("%s", students[i].name);
+        students[i].attendance = 0;
     }
 
-    // Mark attendance
-    printf("\nMark Attendance\n");
-    printf("1 = Present, 0 = Absent\n");
+    do {
+        printf("\n===== MENU =====\n");
+        printf("1. Mark Attendance\n");
+        printf("2. Display Attendance\n");
+        printf("3. Exit\n");
+        printf("Enter your choice: ");
+        scanf("%d", &choice);
 
-    for(i = 0; i < n; i++)
-    {
-        printf("%s: ", name[i]);
-        scanf("%d", &attendance[i]);
-    }
-
-    // Display attendance report
-    printf("\n===== Attendance Report =====\n");
-
-    for(i = 0; i < n; i++)
-    {
-        printf("%s - ", name[i]);
-
-        if(attendance[i] == 1)
-            printf("Present\n");
-        else
-            printf("Absent\n");
-
-        if(attendance[i] == 1)
-        {
-            sum_present = sum_present + attendance[i];
+        switch (choice) {
+            case 1:
+                printf("\n--- Mark Attendance ---\n");
+                for (i = 0; i < n; i++) {
+                    int status;
+                    printf("%s (ID: %d) - Enter 1 for Present, 0 for Absent: ",
+                           students[i].name, students[i].id);
+                    scanf("%d", &status);
+                    if (status == 1)
+                        students[i].attendance++;
+                }
+                printf("Attendance recorded successfully!\n");
+                break;
+            case 2:
+                printf("\n===== ATTENDANCE RECORD =====\n");
+                for (i = 0; i < n; i++)
+                    printf("ID: %d | Name: %s | Attendance: %d\n",
+                           students[i].id, students[i].name, students[i].attendance);
+                break;
+            case 3:
+                printf("\nThank you for using the system!\n");
+                break;
+            default:
+                printf("\nInvalid choice!\n");
         }
-        else
-        {
-            sum_absent = sum_absent + 1;
-        }
-    }
-
-    //Attendence display
-
-    printf("\n===== Attendance Total =====\n");
-
-
-    printf("Total Present : %d \n", sum_present);
-    printf("Total Absent : %d \n", sum_absent);
-
+    } while (choice != 3);
 
     return 0;
 }
